@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Contracts Dashboard - Quiver Quantitative</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <img src="assets/images/quiver-logo.png" alt="Quiver Quantitative" class="logo">
+                        <span class="brand-text">QUIVER QUANTITATIVE</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Datasets <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="government-contracts.html" class="dropdown-item active">Government Contracts</a>
+                            <a href="corporate-lobbying.html" class="dropdown-item">Corporate Lobbying</a>
+                            <a href="insider-trading.html" class="dropdown-item">Insider Trading</a>
+                            <a href="patent-search.html" class="dropdown-item">Patent Search</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Strategies</a>
+                    <a href="#" class="nav-link">Alerts</a>
+                    <a href="#" class="nav-link">Browse Data</a>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search by ticker..." class="global-search" id="globalSearch">
+                        <button class="search-btn" aria-label="Search">🔍</button>
+                    </div>
+                    <button class="btn btn-outline">Strategies</button>
+                    <button class="btn btn-primary">Alerts</button>
+                    <button class="btn btn-info">Browse Data</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>\\</span>
+                    <span>Government Contracts</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="header-actions">
+                    <button class="btn btn-primary">Export Data</button>
+                </div>
+                <h1 class="page-title">Government Contracts Dashboard</h1>
+                <p class="page-description">
+                    USASpending.gov is the official open data source of federal spending information. Using their API, we are able to track government contracts with publicly traded companies down to a transaction.
+                </p>
+                <button class="btn btn-success strategy-btn">SEE OUR GOVERNMENT CONTRACTS TRADING STRATEGY</button>
+            </div>
+        </section>
+
+        <!-- Biggest Recipients Chart -->
+        <section class="recipients-chart-section">
+            <div class="container">
+                <h2 class="section-title">BIGGEST RECIPIENTS (LAST 90D)</h2>
+                
+                <div class="chart-container contracts-chart">
+                    <div class="bar-chart">
+                        <!-- Chart bars representing contract amounts -->
+                        <div class="chart-bar" style="height: 100%; background: #f44336;" data-ticker="DUK" data-amount="300M">
+                            <div class="bar-label">DUK</div>
+                        </div>
+                        <div class="chart-bar" style="height: 45%; background: #4CAF50;" data-ticker="T" data-amount="150M">
+                            <div class="bar-label">T</div>
+                        </div>
+                        <div class="chart-bar" style="height: 35%; background: #2196F3;" data-ticker="SAIC" data-amount="120M">
+                            <div class="bar-label">SAIC</div>
+                        </div>
+                        <div class="chart-bar" style="height: 32%; background: #9C27B0;" data-ticker="BAH" data-amount="110M">
+                            <div class="bar-label">BAH</div>
+                        </div>
+                        <div class="chart-bar" style="height: 28%; background: #FF9800;" data-ticker="NOC" data-amount="95M">
+                            <div class="bar-label">NOC</div>
+                        </div>
+                        <div class="chart-bar" style="height: 25%; background: #00BCD4;" data-ticker="GM" data-amount="85M">
+                            <div class="bar-label">GM</div>
+                        </div>
+                        <div class="chart-bar" style="height: 22%; background: #795548;" data-ticker="GD" data-amount="75M">
+                            <div class="bar-label">GD</div>
+                        </div>
+                        <div class="chart-bar" style="height: 18%; background: #607D8B;" data-ticker="HQY" data-amount="65M">
+                            <div class="bar-label">HQY</div>
+                        </div>
+                        <div class="chart-bar" style="height: 15%; background: #E91E63;" data-ticker="TXT" data-amount="55M">
+                            <div class="bar-label">TXT</div>
+                        </div>
+                        <div class="chart-bar" style="height: 12%; background: #3F51B5;" data-ticker="CCRN" data-amount="45M">
+                            <div class="bar-label">CCRN</div>
+                        </div>
+                        <div class="chart-bar" style="height: 10%; background: #8BC34A;" data-ticker="CRM" data-amount="40M">
+                            <div class="bar-label">CRM</div>
+                        </div>
+                        <div class="chart-bar" style="height: 8%; background: #FFC107;" data-ticker="RQFT" data-amount="35M">
+                            <div class="bar-label">RQFT</div>
+                        </div>
+                        <div class="chart-bar" style="height: 6%; background: #CDDC39;" data-ticker="PLBY" data-amount="30M">
+                            <div class="bar-label">PLBY</div>
+                        </div>
+                        <div class="chart-bar" style="height: 5%; background: #009688;" data-ticker="GGG" data-amount="25M">
+                            <div class="bar-label">GGG</div>
+                        </div>
+                        <div class="chart-bar" style="height: 4%; background: #673AB7;" data-ticker="PCTA" data-amount="20M">
+                            <div class="bar-label">PCTA</div>
+                        </div>
+                        <div class="chart-bar" style="height: 3%; background: #FF5722;" data-ticker="LDMB" data-amount="15M">
+                            <div class="bar-label">LDMB</div>
+                        </div>
+                        <div class="chart-bar" style="height: 2%; background: #9E9E9E;" data-ticker="IBM" data-amount="10M">
+                            <div class="bar-label">IBM</div>
+                        </div>
+                        <div class="chart-bar" style="height: 1.5%; background: #F44336;" data-ticker="YKSS" data-amount="8M">
+                            <div class="bar-label">YKSS</div>
+                        </div>
+                        <div class="chart-bar" style="height: 1%; background: #2196F3;" data-ticker="REI" data-amount="5M">
+                            <div class="bar-label">REI</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Y-axis labels -->
+                    <div class="chart-y-axis">
+                        <div class="y-label" style="bottom: 100%;">300M</div>
+                        <div class="y-label" style="bottom: 75%;">250M</div>
+                        <div class="y-label" style="bottom: 50%;">200M</div>
+                        <div class="y-label" style="bottom: 25%;">150M</div>
+                        <div class="y-label" style="bottom: 12.5%;">100M</div>
+                        <div class="y-label" style="bottom: 6.25%;">50M</div>
+                        <div class="y-label" style="bottom: 0%;">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Contracts -->
+        <section class="recent-contracts">
+            <div class="container">
+                <h2 class="section-title">RECENT CONTRACTS</h2>
+                
+                <div class="table-container">
+                    <table class="data-table contracts-table">
+                        <thead>
+                            <tr>
+                                <th>RECIPIENT</th>
+                                <th>DATE AWARDED</th>
+                                <th>AMOUNT</th>
+                                <th>FUNDING AGENCY</th>
+                                <th>DESCRIPTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="recipient-ticker">A</span></td>
+                                <td class="award-date">2025-06-26</td>
+                                <td class="contract-amount">$38,068</td>
+                                <td class="funding-agency">Department of Agriculture</td>
+                                <td class="contract-description">T-AGILIENT 6890 GC SYSTEM CUSTOM</td>
+                            </tr>
+                            <tr>
+                                <td><span class="recipient-ticker">A</span></td>
+                                <td class="award-date">2025-06-26</td>
+                                <td class="contract-amount">$10,575</td>
+                                <td class="funding-agency">Department of Health and Human Services</td>
+                                <td class="contract-description">CAGE CODE #OYSCG: QUOTE #5001483225: NIPHS ROELAND SCHAEPER: PERIOD OF PERFORMANCE 06/26/2025 - 06/24/2026: ANNUAL SERVICING CONTRACT (CROSSLAB SILVER PLUS) FOR LC1200 INFINITY II LC SYSTEM 25: 005681</td>
+                            </tr>
+                            <tr>
+                                <td><span class="recipient-ticker">A</span></td>
+                                <td class="award-date">2025-06-26</td>
+                                <td class="contract-amount">$5,532</td>
+                                <td class="funding-agency">Department of Agriculture</td>
+                                <td class="contract-description">TAPESTATION 500 DEHATOR CROSSLAB SILVER SERVICE CONTRACT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="recipient-ticker">A</span></td>
+                                <td class="award-date">2025-06-26</td>
+                                <td class="contract-amount">$13,673</td>
+                                <td class="funding-agency">Department of Health and Human Services</td>
+                                <td class="contract-description">PREVENTATIVE MAINTENANCE PLAN FOR LAB EQUIPMENT THE SEAHORSE XFE24 ANALYZER</td>
+                            </tr>
+                            <tr>
+                                <td><span class="recipient-ticker">ADM</span></td>
+                                <td class="award-date">2025-06-26</td>
+                                <td class="contract-amount">$10,149,440</td>
+                                <td class="funding-agency">Department of Agriculture</td>
+                                <td class="contract-description">COMMODITIES FOR USG FOOD DONATIONS: 200001864/4210007400/SORGHUM BULK</td>
+                            </tr>
+                            <tr>
+                                <td><span class="recipient-ticker">ADM</span></td>
+                                <td class="award-date">2025-06-26</td>
+                                <td class="contract-amount">$10,619,796</td>
+                                <td class="funding-agency">Department of Agriculture</td>
+                                <td class="contract-description">COMMODITIES FOR USG FOOD DONATIONS: 200001864/4210007400/SORGHUM BULK</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Datasets -->
+        <section class="other-datasets">
+            <div class="container">
+                <h2 class="section-title">OTHER DATASETS</h2>
+                
+                <div class="datasets-grid">
+                    <a href="insider-trading.html" class="dataset-card house-trading">
+                        <div class="dataset-icon">📈</div>
+                        <div class="dataset-info">
+                            <h3>House Trading</h3>
+                            <p>Dashboard</p>
+                        </div>
+                        <div class="dataset-arrow">→</div>
+                    </a>
+
+                    <a href="corporate-lobbying.html" class="dataset-card corporate-flights">
+                        <div class="dataset-icon">✈️</div>
+                        <div class="dataset-info">
+                            <h3>Corporate Flights</h3>
+                            <p>Dashboard</p>
+                        </div>
+                        <div class="dataset-arrow">→</div>
+                    </a>
+
+                    <a href="#" class="dataset-card app-ratings">
+                        <div class="dataset-icon">📱</div>
+                        <div class="dataset-info">
+                            <h3>App Ratings</h3>
+                            <p>Dashboard</p>
+                        </div>
+                        <div class="dataset-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/images/quiver-logo.png" alt="Quiver Quantitative" class="footer-logo">
+                <span class="footer-brand-text">QUIVER QUANTITATIVE</span>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="TikTok">🎵</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorial</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p>Copyright © 2020-2025 Quiver Quantitative, Inc. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimers</a>
+                </div>
+            </div>
+            <div class="footer-design">
+                <span>Design by: AMEN</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

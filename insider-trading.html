@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider Trading Dashboard - Quiver Quantitative</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+   
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="assets/images/quiver-logo.png" alt="Quiver Quantitative" class="logo">
+                    <span class="brand-text">QUIVER QUANTITATIVE</span>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Datasets <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="government-contracts.html" class="dropdown-item">Government Contracts</a>
+                            <a href="corporate-lobbying.html" class="dropdown-item">Corporate Lobbying</a>
+                            <a href="insider-trading.html" class="dropdown-item active">Insider Trading</a>
+                            <a href="patent-search.html" class="dropdown-item">Patent Search</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Strategies</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Premium <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Premium Features</a>
+                            <a href="#" class="dropdown-item">API Access</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">More <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">About</a>
+                            <a href="#" class="dropdown-item">Blog</a>
+                            <a href="#" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search Quiver..." class="global-search" id="globalSearch">
+                        <button class="search-btn" aria-label="Search">🔍</button>
+                    </div>
+                    <button class="btn btn-outline">Sign In</button>
+                    <button class="btn btn-primary">Join Quiver</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="insider-trading-header">
+                    <div class="insider-trading-info">
+                        <h1 class="page-title">Insider Trading Dashboard</h1>
+                        <p class="page-description">
+                            Corporate insiders are required to disclose purchases or sales of their own stock within two business days of when they occur. 
+                            Using these disclosures, we collect data on GOOGL stock insider trading activity, which can give hints on whether Alphabet Inc-
+                            Ordinary Shares - Class A executives are bullish or bearish on their own company.
+                        </p>
+                    </div>
+                    <div class="insider-trading-actions">
+                        <button class="btn btn-outline">Sign Up For Insider Trading Alerts</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-widget">
+                    <h2 class="search-title">🔍 Search</h2>
+                    <p class="search-subtitle">View recent insider activity for a given company</p>
+                    <div class="search-form">
+                        <input type="text" placeholder="Enter ticker symbol..." class="search-input" value="">
+                        <button class="btn btn-primary">View Activity</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Largest Recent Purchases & Sales -->
+        <section class="treemap-section">
+            <div class="container">
+                <h2 class="section-title">Largest Recent Purchases & Sales</h2>
+                
+                <div class="treemap-container">
+                    <div class="treemap-item large red" data-ticker="ORKN" data-amount="$50,000">
+                        <div class="treemap-content">
+                            <div class="treemap-ticker">ORKN</div>
+                            <div class="treemap-insider">Stamford Funds</div>
+                        </div>
+                    </div>
+                    
+                    <div class="treemap-column">
+                        <div class="treemap-item medium green" data-ticker="ROKU" data-amount="$30,000">
+                            <div class="treemap-content">
+                                <div class="treemap-ticker">ROKU</div>
+                                <div class="treemap-insider">Trevor Waldorf</div>
+                            </div>
+                        </div>
+                        
+                        <div class="treemap-row">
+                            <div class="treemap-item small blue" data-ticker="AMZN" data-amount="$15,000">
+                                <div class="treemap-content">
+                                    <div class="treemap-ticker">AMZN</div>
+                                    <div class="treemap-insider">Jeff Bezos</div>
+                                </div>
+                            </div>
+                            
+                            <div class="treemap-item small purple" data-ticker="TSLA" data-amount="$25,000">
+                                <div class="treemap-content">
+                                    <div class="treemap-ticker">TSLA</div>
+                                    <div class="treemap-insider">Elon Musk</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="treemap-column-right">
+                        <div class="treemap-item small gray" data-ticker="AAPL" data-amount="$20,000">
+                            <div class="treemap-content">
+                                <div class="treemap-ticker">AAPL</div>
+                                <div class="treemap-insider">Tim Cook</div>
+                            </div>
+                        </div>
+                        
+                        <div class="treemap-item medium orange" data-ticker="NVDA" data-amount="$40,000">
+                            <div class="treemap-content">
+                                <div class="treemap-ticker">NVDA</div>
+                                <div class="treemap-insider">Jensen Huang</div>
+                            </div>
+                        </div>
+                        
+                        <div class="treemap-item small pink" data-ticker="META" data-amount="$18,000">
+                            <div class="treemap-content">
+                                <div class="treemap-ticker">META</div>
+                                <div class="treemap-insider">Mark Zuckerberg</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="treemap-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #4CAF50;"></div>
+                            <span>Est. Purchase Amount in Shares</span>
+                        </div>
+                        <div class="legend-scale">
+                            <span>$0</span>
+                            <div class="scale-bar"></div>
+                            <span>30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Insider Activity -->
+        <section class="insider-activity">
+            <div class="container">
+                <h2 class="section-title">Recent Insider Activity</h2>
+                
+                <div class="table-container">
+                    <table class="data-table insider-table">
+                        <thead>
+                            <tr>
+                                <th>Name / Title</th>
+                                <th>Stock</th>
+                                <th>Purchase / Sale</th>
+                                <th>Shares</th>
+                                <th>Share Price</th>
+                                <th>Date</th>
+                                <th>Disclosed (EST)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="insider-info">
+                                        <div class="insider-name">OREGON COMMUNITY FOUNDATION</div>
+                                        <div class="insider-title"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-ticker">JCTC</span>
+                                </td>
+                                <td>
+                                    <span class="transaction-type sale">Sale</span>
+                                </td>
+                                <td class="shares">2404</td>
+                                <td class="share-price">$3.75</td>
+                                <td class="trade-date">Jul 03, 2025</td>
+                                <td class="disclosed-date">July 3, 2025, 8:41 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="insider-info">
+                                        <div class="insider-name">OREGON COMMUNITY FOUNDATION</div>
+                                        <div class="insider-title"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-ticker">JCTC</span>
+                                </td>
+                                <td>
+                                    <span class="transaction-type sale">Sale</span>
+                                </td>
+                                <td class="shares">8830</td>
+                                <td class="share-price">$3.76</td>
+                                <td class="trade-date">Jul 03, 2025</td>
+                                <td class="disclosed-date">July 3, 2025, 8:41 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="insider-info">
+                                        <div class="insider-name">Hoops Elliot Dean</div>
+                                        <div class="insider-title">General Counsel and Secretary</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-ticker">HP</span>
+                                </td>
+                                <td>
+                                    <span class="transaction-type sale">Sale</span>
+                                </td>
+                                <td class="shares">3937</td>
+                                <td class="share-price">$32.24</td>
+                                <td class="trade-date">Jul 01, 2025</td>
+                                <td class="disclosed-date">July 3, 2025, 9:37 a.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="insider-info">
+                                        <div class="insider-name">Hoops Elliot Dean</div>
+                                        <div class="insider-title">General Counsel and Secretary</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-ticker">HP</span>
+                                </td>
+                                <td>
+                                    <span class="transaction-type sale">Sale</span>
+                                </td>
+                                <td class="shares">2401</td>
+                                <td class="share-price">$31.46</td>
+                                <td class="trade-date">Jul 01, 2025</td>
+                                <td class="disclosed-date">July 3, 2025, 9:37 a.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="insider-info">
+                                        <div class="insider-name">Sharma Jonathan</div>
+                                        <div class="insider-title">Chief Financial Officer</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-ticker">NTRA</span>
+                                </td>
+                                <td>
+                                    <span class="transaction-type sale">Sale</span>
+                                </td>
+                                <td class="shares">1052</td>
+                                <td class="share-price">$360.1</td>
+                                <td class="trade-date">Jul 02, 2025</td>
+                                <td class="disclosed-date">July 3, 2025, 9:05 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="insider-info">
+                                        <div class="insider-name">Sharma Jonathan</div>
+                                        <div class="insider-title">Chief Financial Officer</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-ticker">NTRA</span>
+                                </td>
+                                <td>
+                                    <span class="transaction-type sale">Sale</span>
+                                </td>
+                                <td class="shares">1011</td>
+                                <td class="share-price">$360.11</td>
+                                <td class="trade-date">Jul 02, 2025</td>
+                                <td class="disclosed-date">July 3, 2025, 8:50 p.m.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Largest Recent Executive Buys -->
+        <section class="executive-buys">
+            <div class="container">
+                <h2 class="section-title">Largest Recent Executive Buys</h2>
+                
+                <div class="executive-treemap">
+                    <div class="exec-treemap-item large green" data-ticker="CSCO">
+                        <div class="exec-content">
+                            <div class="exec-ticker">CSCO</div>
+                            <div class="exec-name">Chuck Robbins</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exec-treemap-column">
+                        <div class="exec-treemap-item medium teal" data-ticker="BA">
+                            <div class="exec-content">
+                                <div class="exec-ticker">BA</div>
+                                <div class="exec-name">Dave Calhoun</div>
+                            </div>
+                        </div>
+                        
+                        <div class="exec-treemap-item small gray" data-ticker="COST">
+                            <div class="exec-content">
+                                <div class="exec-ticker">COST</div>
+                                <div class="exec-name">Craig Jelinek</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exec-treemap-right">
+                        <div class="exec-treemap-item medium blue" data-ticker="SBUX">
+                            <div class="exec-content">
+                                <div class="exec-ticker">SBUX</div>
+                                <div class="exec-name">Howard Schultz</div>
+                            </div>
+                        </div>
+                        
+                        <div class="exec-treemap-row">
+                            <div class="exec-treemap-item small purple" data-ticker="MSFT">
+                                <div class="exec-content">
+                                    <div class="exec-ticker">MSFT</div>
+                                    <div class="exec-name">Satya Nadella</div>
+                                </div>
+                            </div>
+                            
+                            <div class="exec-treemap-item small orange" data-ticker="V">
+                                <div class="exec-content">
+                                    <div class="exec-ticker">V</div>
+                                    <div class="exec-name">Al Kelly</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exec-treemap-item small pink" data-ticker="WMT">
+                            <div class="exec-content">
+                                <div class="exec-ticker">WMT</div>
+                                <div class="exec-name">Doug McMillon</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exec-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #4CAF50;"></div>
+                            <span>Est. Purchase Amount in Shares</span>
+                        </div>
+                        <div class="legend-scale">
+                            <span>$0</span>
+                            <div class="scale-bar"></div>
+                            <span>40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/images/quiver-logo.png" alt="Quiver Quantitative" class="footer-logo">
+                <span class="footer-brand-text">QUIVER QUANTITATIVE</span>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="TikTok">🎵</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                </div>
+                <div class="google-news">
+                    <img src="assets/images/google-news-logo.png" alt="Google News">
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tutorial</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Merch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Premium</h4>
+                    <ul>
+                        <li><a href="#">Alerts</a></li>
+                        <li><a href="#">Congress Backtester</a></li>
+                        <li><a href="#">Stock Screener</a></li>
+                        <li><a href="#">Strategies</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Brokerage Partners</h4>
+                    <img src="assets/images/lightspeed-logo.png" alt="Lightspeed" class="partner-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p>Copyright © 2020-2025 Quiver Quantitative, Inc. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimers</a>
+                </div>
+            </div>
+            <div class="footer-powered">
+                <span>Powered by</span>
+                <img src="assets/images/quiver-api-logo.png" alt="QUIVER API">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

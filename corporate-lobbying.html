@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Lobbying Dashboard - Quiver Quantitative</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="assets/images/quiver-logo.png" alt="Quiver Quantitative" class="logo">
+                    <span class="brand-text">QUIVER QUANTITATIVE</span>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Datasets <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="government-contracts.html" class="dropdown-item">Government Contracts</a>
+                            <a href="corporate-lobbying.html" class="dropdown-item active">Corporate Lobbying</a>
+                            <a href="insider-trading.html" class="dropdown-item">Insider Trading</a>
+                            <a href="patent-search.html" class="dropdown-item">Patent Search</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Strategies</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Premium <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Premium Features</a>
+                            <a href="#" class="dropdown-item">API Access</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">More <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">About</a>
+                            <a href="#" class="dropdown-item">Blog</a>
+                            <a href="#" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search Quiver..." class="global-search" id="globalSearch">
+                        <button class="search-btn" aria-label="Search">🔍</button>
+                    </div>
+                    <button class="btn btn-outline">Sign In</button>
+                    <button class="btn btn-primary">Join Quiver</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="header-actions">
+                    <button class="btn btn-primary">Export Data</button>
+                </div>
+                <h1 class="page-title">Corporate Lobbying Dashboard</h1>
+                <p class="page-subtitle">Last Updated July 3, 2025 9:16 a.m.</p>
+                <p class="page-description">
+                    The Lobbying Disclosure Act of 1995 requires lobbyists in the United States to disclose information about their activities, such as their... 
+                    <a href="#" class="read-more">More</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-grid">
+                    <div class="search-group">
+                        <label for="tickerSearch">📈 Ticker Search</label>
+                        <div class="search-input-group">
+                            <input type="text" id="tickerSearch" placeholder="Search lobbying by stock ticker..." value="AAPL">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                        <small class="search-hint">Search lobbying by stock ticker.</small>
+                    </div>
+
+                    <div class="search-group">
+                        <label for="keywordSearch">🔍 Keyword Search</label>
+                        <div class="search-input-group">
+                            <input type="text" id="keywordSearch" placeholder="Search lobbying by keyword..." value="Data Privacy">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                        <small class="search-hint">Search lobbying by keyword.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Disclosures -->
+        <section class="recent-disclosures">
+            <div class="container">
+                <h2 class="section-title">📋 Recent Disclosures</h2>
+                <p class="section-subtitle">Click on a disclosure to view specific issues and lobbying history for the given company</p>
+                
+                <div class="table-container">
+                    <table class="data-table lobbying-table">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo oil"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">OIL</span>
+                                            <span class="company-name">SUNCOR ENERGY INTERNATIONAL INC.</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount">$50,000</td>
+                                <td class="date">July 4, 2025, 8:31 a.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo pcs"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">PCS</span>
+                                            <span class="company-name">METRO PCS COMMUNICATIONS</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount">$15,000</td>
+                                <td class="date">July 3, 2025, 6:50 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo pch"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">PCH</span>
+                                            <span class="company-name">POTLATCH CORPORATION INC.</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount">$30,000</td>
+                                <td class="date">July 3, 2025, 4:52 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo bdm"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">BDM</span>
+                                            <span class="company-name">BIOREM COMMUNICATIONS INC (FORMERLY SATVIDEO INC.)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount">$50,000</td>
+                                <td class="date">July 3, 2025, 3:18 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo oxy"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">OXY</span>
+                                            <span class="company-name">OCCIDENTAL PETROLEUM CORPORATION</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount">$50,000</td>
+                                <td class="date">July 3, 2025, 3:18 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo hon"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">HON</span>
+                                            <span class="company-name">HONEYWELL INTERNATIONAL INC.</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount">$60,000</td>
+                                <td class="date">July 3, 2025, 3:15 p.m.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Lobbying Spenders Strategy -->
+        <section class="strategy-section">
+            <div class="container">
+                <div class="strategy-header">
+                    <h2 class="section-title">Top Lobbying Spenders Strategy <span class="premium-badge">Premium</span></h2>
+                    <p class="strategy-description">
+                        This strategy takes an equal-weighted position in 10 publicly-traded companies that have reported the most 
+                        lobbying spending over the last quarter, rebalanced monthly.
+                    </p>
+                    <p class="strategy-date">Backtest Start Date: 2024-01-01</p>
+                </div>
+
+                <div class="strategy-actions">
+                    <button class="btn btn-outline">Copytrade</button>
+                    <button class="btn btn-outline">Share</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="metrics-section">
+            <div class="container">
+                <div class="metrics-header">
+                    <h2 class="section-title">Key Metrics 📊 <a href="#" class="show-full-metrics">Show Full Metrics</a></h2>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Return (1d)</div>
+                        <div class="metric-value negative">0.00%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Return (5d)</div>
+                        <div class="metric-value negative">-8.50%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Return (1M)</div>
+                        <div class="metric-value positive">18.70%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">CAGR (Total)</div>
+                        <div class="metric-value positive">19.01%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Total Return</div>
+                        <div class="metric-value negative">-28.80%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Sharpe</div>
+                        <div class="metric-value">0.87</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Max DD</div>
+                        <div class="metric-value">0.01</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Current Beta</div>
+                        <div class="metric-value">0.706</div>
+                    </div>
+                </div>
+
+                <div class="premium-signup">
+                    <p>Sign up for <a href="#" class="premium-link">Quiver Premium</a> to see live holdings and portfolio insights for the <span class="strategy-name">Top Lobbying Spenders Strategy</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Spenders -->
+        <section class="top-spenders">
+            <div class="container">
+                <h2 class="section-title">💰 Top Spenders (Last Quarter)</h2>
+                <p class="section-subtitle">Click on a row to view specific issues and lobbying history for the given company</p>
+                
+                <div class="table-container">
+                    <table class="data-table spenders-table">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo gm"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">GM</span>
+                                            <span class="company-name">GENERAL MOTORS COMPANY</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount large">$8,150,000</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo meta"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">META</span>
+                                            <span class="company-name">META PLATFORMS INC - ORDINARY SHARES - CLASS A</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount large">$7,990,000</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo amzn"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">AMZN</span>
+                                            <span class="company-name">AMAZON.COM INC</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount large">$4,380,000</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo pfe"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">PFE</span>
+                                            <span class="company-name">PFIZER INC.</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount large">$4,240,000</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo amgn"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">AMGN</span>
+                                            <span class="company-name">AMGEN INC.</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount large">$4,237,500</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ticker-cell">
+                                        <div class="company-logo unh"></div>
+                                        <div class="ticker-info">
+                                            <span class="ticker-symbol">UNH</span>
+                                            <span class="company-name">UNITEDHEALTH GROUP INC</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="amount large">$3,950,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/images/quiver-logo.png" alt="Quiver Quantitative" class="footer-logo">
+                <span class="footer-brand-text">QUIVER QUANTITATIVE</span>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="TikTok">🎵</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                </div>
+                <div class="google-news">
+                    <img src="assets/images/google-news-logo.png" alt="Google News">
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tutorial</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Merch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Premium</h4>
+                    <ul>
+                        <li><a href="#">Alerts</a></li>
+                        <li><a href="#">Congress Backtester</a></li>
+                        <li><a href="#">Stock Screener</a></li>
+                        <li><a href="#">Strategies</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Brokerage Partners</h4>
+                    <img src="assets/images/lightspeed-logo.png" alt="Lightspeed" class="partner-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p>Copyright © 2020-2025 Quiver Quantitative, Inc. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimers</a>
+                </div>
+            </div>
+            <div class="footer-powered">
+                <span>Powered by</span>
+                <img src="assets/images/quiver-api-logo.png" alt="QUIVER API">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

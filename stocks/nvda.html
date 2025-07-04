@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nvidia Corp - NVDA - Quiver Quantitative</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- July 4th Sale Banner -->
+    <div class="sale-banner">
+        <div class="sale-content">
+            <span class="sale-icon">🎆 JULY 4TH SALE</span>
+            <span class="sale-text">50% off your first year of Quiver Premium: 00 : 14 : 28 : 19</span>
+            <span class="sale-code">Use Promo Code: JULY4</span>
+            <button class="btn btn-primary btn-small">Upgrade</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <img src="../assets/images/quiver-logo.png" alt="Quiver Quantitative" class="logo">
+                        <span class="brand-text">QUIVER QUANTITATIVE</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Datasets <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="../government-contracts.html" class="dropdown-item">Government Contracts</a>
+                            <a href="../corporate-lobbying.html" class="dropdown-item">Corporate Lobbying</a>
+                            <a href="../insider-trading.html" class="dropdown-item">Insider Trading</a>
+                            <a href="../patent-search.html" class="dropdown-item">Patent Search</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Strategies</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">Premium <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Premium Features</a>
+                            <a href="#" class="dropdown-item">API Access</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-toggle">More <span class="arrow">▼</span></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">About</a>
+                            <a href="#" class="dropdown-item">Blog</a>
+                            <a href="#" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search Quiver..." class="global-search" id="globalSearch">
+                        <button class="search-btn" aria-label="Search">🔍</button>
+                    </div>
+                    <div class="account-menu">
+                        <button class="btn btn-outline">My Account</button>
+                        <button class="btn btn-primary">Upgrade Plan</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Stock Header -->
+        <section class="stock-header">
+            <div class="container">
+                <div class="stock-title-section">
+                    <div class="stock-logo-large nvda">NVDA</div>
+                    <div class="stock-title-info">
+                        <h1>Nvidia Corp</h1>
+                        <p>NVDA • Real-time data • Price Data unavailable due to NASDAQ LEVEL 1</p>
+                    </div>
+                    <div class="stock-actions">
+                        <button class="btn btn-primary">Add to Watchlist +</button>
+                    </div>
+                </div>
+
+                <div class="stock-tabs">
+                    <a href="#" class="stock-tab active">Overview</a>
+                    <a href="#" class="stock-tab">Financials</a>
+                    <a href="#" class="stock-tab">Forecast</a>
+                    <a href="#" class="stock-tab">Investors</a>
+                    <a href="#" class="stock-tab">Valuation</a>
+                    <a href="#" class="stock-tab">Government</a>
+                    <a href="#" class="stock-tab">Ownership</a>
+                    <a href="#" class="stock-tab">News</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stock Content -->
+        <section class="stock-content">
+            <div class="container">
+                <!-- Stock Chart and Info Grid -->
+                <div class="stock-grid">
+                    <div class="stock-chart-container">
+                        <div class="chart-header">
+                            <div class="chart-controls">
+                                <button class="chart-btn">1D</button>
+                                <button class="chart-btn">5D</button>
+                                <button class="chart-btn">1M</button>
+                                <button class="chart-btn">3M</button>
+                                <button class="chart-btn active">6M</button>
+                                <button class="chart-btn">1Y</button>
+                                <button class="chart-btn">5Y</button>
+                                <button class="chart-btn">MAX</button>
+                            </div>
+                            <div class="price-indicators">
+                                <span class="indicator">📊 INDICATORS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stock-chart-placeholder">
+                            <!-- Stock price chart would go here -->
+                            <div class="chart-area">
+                                <svg width="100%" height="300" viewBox="0 0 800 300">
+                                    <!-- Sample stock chart line -->
+                                    <polyline 
+                                        fill="none" 
+                                        stroke="#4CAF50" 
+                                        stroke-width="2"
+                                        points="50,250 100,220 150,200 200,180 250,160 300,140 350,120 400,100 450,90 500,95 550,105 600,115 650,125 700,130 750,135"
+                                    />
+                                    <!-- Price points -->
+                                    <circle cx="50" cy="250" r="3" fill="#4CAF50"/>
+                                    <circle cx="750" cy="135" r="3" fill="#4CAF50"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="chart-info">
+                            <p>NVDA stock is featured on our <a href="#" class="chart-link">Patent Whitespace, U.S. Game Long Shorts</a> and our <a href="#" class="chart-link">Short Contract strategies</a>.</p>
+                            <button class="btn btn-outline">🚀 See All Strategies</button>
+                        </div>
+                    </div>
+
+                    <div class="widget-container">
+                        <!-- Congress Trading Widget -->
+                        <div class="widget congress-trading">
+                            <h3>📊 Congress Trading</h3>
+                            <p class="widget-subtitle">Recent trades of NVDA by members of U.S. Congress</p>
+                            
+                            <div class="congress-trades">
+                                <div class="trade-item">
+                                    <div class="trade-info">
+                                        <span class="trader-name">Dan Crenshaw</span>
+                                        <span class="trade-type purchase">Purchase</span>
+                                    </div>
+                                    <div class="trade-details">
+                                        <span class="trade-amount">$15,001 - $50,000</span>
+                                        <span class="trade-date">Jan 30, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="trade-item">
+                                    <div class="trade-info">
+                                        <span class="trader-name">Dan Crenshaw</span>
+                                        <span class="trade-type purchase">Purchase</span>
+                                    </div>
+                                    <div class="trade-details">
+                                        <span class="trade-amount">$1,001 - $15,000</span>
+                                        <span class="trade-date">Jan 30, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="trade-item">
+                                    <div class="trade-info">
+                                        <span class="trader-name">Dan Crenshaw</span>
+                                        <span class="trade-type purchase">Purchase</span>
+                                    </div>
+                                    <div class="trade-details">
+                                        <span class="trade-amount">$50,001 - $100,000</span>
+                                        <span class="trade-date">Jan 30, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="trade-item">
+                                    <div class="trade-info">
+                                        <span class="trader-name">Dan Crenshaw</span>
+                                        <span class="trade-type purchase">Purchase</span>
+                                    </div>
+                                    <div class="trade-details">
+                                        <span class="trade-amount">$1,001 - $15,000</span>
+                                        <span class="trade-date">Jan 30, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="trade-item">
+                                    <div class="trade-info">
+                                        <span class="trader-name">Dan Crenshaw</span>
+                                        <span class="trade-type purchase">Purchase</span>
+                                    </div>
+                                    <div class="trade-details">
+                                        <span class="trade-amount">$1,001 - $15,000</span>
+                                        <span class="trade-date">Jan 30, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Whale Activity Widget -->
+                        <div class="widget whale-activity">
+                            <h3>🐋 Whale Activity</h3>
+                            <p class="widget-subtitle">Recently reported changes by institutional insiders</p>
+                            
+                            <div class="whale-chart">
+                                <div class="whale-donut">
+                                    <svg width="120" height="120" viewBox="0 0 120 120">
+                                        <!-- Donut chart segments -->
+                                        <circle cx="60" cy="60" r="40" fill="none" stroke="#4CAF50" stroke-width="20" stroke-dasharray="125.6 251.2" transform="rotate(-90 60 60)"/>
+                                        <circle cx="60" cy="60" r="40" fill="none" stroke="#f44336" stroke-width="20" stroke-dasharray="62.8 313.6" stroke-dashoffset="-125.6" transform="rotate(-90 60 60)"/>
+                                        <circle cx="60" cy="60" r="40" fill="none" stroke="#FF9800" stroke-width="20" stroke-dasharray="37.7 338.7" stroke-dashoffset="-188.4" transform="rotate(-90 60 60)"/>
+                                    </svg>
+                                    <div class="donut-center">
+                                        <div class="center-label">Sentiment</div>
+                                    </div>
+                                </div>
+                                <div class="whale-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-dot" style="background: #4CAF50;"></div>
+                                        <span>Increased</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-dot" style="background: #f44336;"></div>
+                                        <span>Decreased</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-dot" style="background: #FF9800;"></div>
+                                        <span>New</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Sections Grid -->
+                <div class="data-sections-grid">
+                    <!-- Insider Trading -->
+                    <div class="data-section insider-trading-section">
+                        <h3>📈 Insider Trading</h3>
+                        <p class="section-subtitle">Standard stock purchase disclosures and management</p>
+                        
+                        <div class="insider-chart-container">
+                            <div class="insider-bar-chart">
+                                <!-- Insider trading bars -->
+                                <div class="insider-bar negative" style="height: 80%;" data-period="2019Q4">
+                                    <div class="bar-value">-1M</div>
+                                </div>
+                                <div class="insider-bar negative" style="height: 60%;" data-period="2020Q1">
+                                    <div class="bar-value">-0.8M</div>
+                                </div>
+                                <div class="insider-bar negative" style="height: 100%;" data-period="2020Q2">
+                                    <div class="bar-value">-1.2M</div>
+                                </div>
+                                <div class="insider-bar negative" style="height: 40%;" data-period="2020Q3">
+                                    <div class="bar-value">-0.5M</div>
+                                </div>
+                                <div class="insider-bar negative" style="height: 70%;" data-period="2020Q4">
+                                    <div class="bar-value">-0.9M</div>
+                                </div>
+                            </div>
+                            <div class="chart-x-axis">
+                                <span>2019Q4</span>
+                                <span>2020Q1</span>
+                                <span>2020Q2</span>
+                                <span>2020Q3</span>
+                                <span>2020Q4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Corporate Lobbying -->
+                    <div class="data-section lobbying-section">
+                        <h3>🏛️ Corporate Lobbying</h3>
+                        <p class="section-subtitle">Quarterly lobbying spending</p>
+                        
+                        <div class="lobbying-chart-container">
+                            <div class="lobbying-bar-chart">
+                                <div class="lobbying-bar" style="height: 20%;" data-amount="240K">
+                                    <div class="bar-value">240K</div>
+                                </div>
+                                <div class="lobbying-bar" style="height: 30%;" data-amount="360K">
+                                    <div class="bar-value">360K</div>
+                                </div>
+                                <div class="lobbying-bar" style="height: 50%;" data-amount="600K">
+                                    <div class="bar-value">600K</div>
+                                </div>
+                                <div class="lobbying-bar" style="height: 80%;" data-amount="960K">
+                                    <div class="bar-value">960K</div>
+                                </div>
+                                <div class="lobbying-bar" style="height: 100%;" data-amount="1.2M">
+                                    <div class="bar-value">1.2M</div>
+                                </div>
+                            </div>
+                            <div class="chart-x-axis">
+                                <span>2019</span>
+                                <span>2020</span>
+                                <span>2021</span>
+                                <span>2022</span>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Breakdown -->
+                    <div class="data-section revenue-section">
+                        <h3>💰 Revenue Breakdown</h3>
+                        <p class="section-subtitle">% Segments • % Geographic</p>
+                        
+                        <div class="revenue-charts">
+                            <div class="revenue-pie">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#2196F3" stroke-width="15" stroke-dasharray="56.5 188.4" transform="rotate(-90 50 50)"/>
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#4CAF50" stroke-width="15" stroke-dasharray="47.1 188.4" stroke-dashoffset="-56.5" transform="rotate(-90 50 50)"/>
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#FF9800" stroke-width="15" stroke-dasharray="31.4 188.4" stroke-dashoffset="-103.6" transform="rotate(-90 50 50)"/>
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#9C27B0" stroke-width="15" stroke-dasharray="53.4 188.4" stroke-dashoffset="-135" transform="rotate(-90 50 50)"/>
+                                </svg>
+                            </div>
+                            <div class="revenue-breakdown">
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Gaming</span>
+                                    <span class="breakdown-value">$61.0B</span>
+                                    <span class="breakdown-percent">55.15%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Professional Visualization</span>
+                                    <span class="breakdown-value">$52.9B</span>
+                                    <span class="breakdown-percent">8.1%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Auto</span>
+                                    <span class="breakdown-value">$60.9B</span>
+                                    <span class="breakdown-percent">1.3%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">OEM and Other</span>
+                                    <span class="breakdown-value">$11.1B</span>
+                                    <span class="breakdown-percent">0.3%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- U.S. Patents -->
+                    <div class="data-section patents-section">
+                        <h3>📋 U.S. Patents</h3>
+                        <p class="section-subtitle">New patents granted</p>
+                        
+                        <div class="patents-list">
+                            <div class="patent-item">
+                                <div class="patent-title">Patent Title</div>
+                                <div class="patent-description">Image bleed processing systems for high dynamic range cameras</div>
+                                <div class="patent-date">Apr 16, 2024</div>
+                            </div>
+                            <div class="patent-item">
+                                <div class="patent-title">Patent Title</div>
+                                <div class="patent-description">Offloading execution management for network resources</div>
+                                <div class="patent-date">Apr 16, 2024</div>
+                            </div>
+                            <div class="patent-item">
+                                <div class="patent-title">Patent Title</div>
+                                <div class="patent-description">Edge generation for new mesh thermal material</div>
+                                <div class="patent-date">Apr 16, 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Government Contracts -->
+                    <div class="data-section contracts-section">
+                        <h3>🏛️ Government Contracts</h3>
+                        <p class="section-subtitle">Contracts quarterly amounts awarded from public contracts</p>
+                        
+                        <div class="contracts-info">
+                            <div class="no-contracts">
+                                <p>No Recent Government Contracts for this ticker</p>
+                                <button class="btn btn-outline">📊 Government Contracts Dashboard</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NVDA News -->
+                    <div class="data-section news-section">
+                        <h3>📰 NVDA News</h3>
+                        <p class="section-subtitle">Recent news about NVDA</p>
+                        
+                        <div class="news-list">
+                            <div class="news-item">
+                                <div class="news-icon">📰</div>
+                                <div class="news-content">
+                                    <div class="news-title">Crypto Corrects, Introduces Buy to Global Crypto Regulation Uproar</div>
+                    </div>
+                                <div class="news-date">Published: 2 hours ago</div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-icon">📰</div>
+                                <div class="news-content">
+                                    <div class="news-title">NVIDIA UNVEILS Omniverse for All Chip Expert Delivers and Stock Surge</div>
+                                </div>
+                                <div class="news-date">Published: 3 hours ago</div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-icon">📰</div>
+                                <div class="news-content">
+                                    <div class="news-title">2025 announces purchase of 2.4 of NVIDIA Rockwell GPUs</div>
+                                </div>
+                                <div class="news-date">Published: 6 hours ago</div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-icon">📰</div>
+                                <div class="news-content">
+                                    <div class="news-title">New disclosure: Rep. Chip Fields purchased $100,000-250,000 of NVIDIA</div>
+                                </div>
+                                <div class="news-date">Published: 8 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top ETF Holdings -->
+                    <div class="data-section etf-section">
+                        <h3>📊 Top ETF Holdings</h3>
+                        <p class="section-subtitle">ETFs with the largest estimated holdings in NVDA</p>
+                        
+                        <div class="etf-list">
+                            <div class="etf-item">
+                                <div class="etf-info">
+                                    <span class="etf-ticker">QQQ</span>
+                                    <span class="etf-name">INVESCO QQQ</span>
+                                </div>
+                                <div class="etf-holding">$19 billion</div>
+                            </div>
+                            <div class="etf-item">
+                                <div class="etf-info">
+                                    <span class="etf-ticker">VTI</span>
+                                    <span class="etf-name">VTI</span>
+                                </div>
+                                <div class="etf-holding">$13 billion</div>
+                            </div>
+                            <div class="etf-item">
+                                <div class="etf-info">
+                                    <span class="etf-ticker">VOO</span>
+                                    <span class="etf-name">VOO</span>
+                                </div>
+                                <div class="etf-holding">$9 billion</div>
+                            </div>
+                            <div class="etf-item">
+                                <div class="etf-info">
+                                    <span class="etf-ticker">VUG</span>
+                                    <span class="etf-name">VUG</span>
+                                </div>
+                                <div class="etf-holding">$8 billion</div>
+                            </div>
+                            <div class="etf-item">
+                                <div class="etf-info">
+                                    <span class="etf-ticker">SOXX</span>
+                                    <span class="etf-name">SOXX</span>
+                                </div>
+                                <div class="etf-holding">$8 billion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stock Score -->
+                <div class="stock-score-section">
+                    <div class="score-widget">
+                        <h3>🎯 NVDA Stock Smart Score</h3>
+                        <div class="score-display">
+                            <div class="score-meter">
+                                <div class="score-arc">
+                                    <div class="score-value">LOW</div>
+                                    <div class="score-number">4.4 out of 10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bull-case-widget">
+                        <h3>🐂 Bull Case in Bear Case</h3>
+                        <p class="widget-subtitle">Bull Case is only available on Quiver Premium subscribers.</p>
+                        <div class="premium-cta">
+                            <p>Upgrade your account to Quiver Premium to view this data</p>
+                            <button class="btn btn-primary">Upgrade Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Top -->
+                <div class="back-to-top">
+                    <button class="btn btn-outline">⬆️ Back to Top</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../assets/images/quiver-logo.png" alt="Quiver Quantitative" class="footer-logo">
+                <span class="footer-brand-text">QUIVER QUANTITATIVE</span>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="TikTok">🎵</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                </div>
+                <div class="google-news">
+                    <img src="../assets/images/google-news-logo.png" alt="Google News">
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">Tutorial</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Merch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Premium</h4>
+                    <ul>
+                        <li><a href="#">Alerts</a></li>
+                        <li><a href="#">Congress Backtester</a></li>
+                        <li><a href="#">Stock Screener</a></li>
+                        <li><a href="#">Strategies</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Brokerage Partners</h4>
+                    <img src="../assets/images/lightspeed-logo.png" alt="Lightspeed" class="partner-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p>Copyright © 2020-2025 Quiver Quantitative, Inc. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimers</a>
+                </div>
+            </div>
+            <div class="footer-powered">
+                <span>Powered by</span>
+                <img src="../assets/images/quiver-api-logo.png" alt="QUIVER API">
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>
