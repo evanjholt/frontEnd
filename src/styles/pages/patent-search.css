@@ -1,0 +1,296 @@
+/* Patent Search Page Styles */
+
+/* Patent Search Form */
+.patent-search-form {
+    background: var(--bg-secondary);
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    text-align: center;
+}
+
+.search-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-3xl);
+}
+
+.search-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.search-form-group label {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.search-form-input {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+}
+
+.search-form-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-form-btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Patent Results Styles */
+.patent-header {
+    background: var(--bg-secondary);
+}
+
+.keyword-title {
+    color: var(--color-error);
+}
+
+.patent-visualization {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-primary);
+}
+
+.patent-chart-container {
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    border: 1px solid var(--border-primary);
+}
+
+.patent-scatter-chart {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-xl);
+    height: 500px;
+}
+
+.patent-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.category-item {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.scatter-plot-area {
+    position: relative;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-md);
+}
+
+.legend {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: var(--font-size-sm);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--border-radius-full);
+}
+
+.legend-dot.current-year {
+    background: var(--color-success);
+}
+
+.legend-dot.recent-year {
+    background: var(--color-error);
+}
+
+.patent-dots {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.patent-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.patent-dot:hover {
+    transform: scale(1.5);
+}
+
+.patent-dot.current-year {
+    background: var(--color-success);
+}
+
+.patent-dot.recent-year {
+    background: var(--color-error);
+}
+
+/* Patents Table */
+.recent-patents {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-secondary);
+}
+
+.patents-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-note {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.patents-table {
+    font-size: var(--font-size-sm);
+}
+
+.patent-date {
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+}
+
+.patent-title {
+    max-width: 400px;
+}
+
+.patent-link {
+    color: var(--color-success);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+.patent-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Patent Search Widget */
+.patent-search-widget {
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-2xl);
+    border: 1px solid var(--border-primary);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.patent-search-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.patent-search-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-base);
+}
+
+/* Other Datasets */
+.other-datasets {
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    background: var(--bg-primary);
+}
+
+.datasets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dataset-card {
+    background: linear-gradient(135deg, var(--color-success), var(--color-primary-dark));
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xl);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.dataset-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+}
+
+.dataset-card.corporate-flights {
+    background: linear-gradient(135deg, var(--color-secondary), #1976D2);
+}
+
+.dataset-card.app-ratings {
+    background: linear-gradient(135deg, #00BCD4, #0097A7);
+}
+
+.dataset-icon {
+    font-size: var(--font-size-3xl);
+    flex-shrink: 0;
+}
+
+.dataset-info h3 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-size-xl);
+}
+
+.dataset-info p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: var(--font-size-sm);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-form-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .patent-scatter-chart {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .patent-categories {
+        display: none;
+    }
+    
+    .datasets-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dataset-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}

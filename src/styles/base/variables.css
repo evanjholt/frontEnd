@@ -1,0 +1,132 @@
+/* CSS Variables for Theme and Design System */
+:root {
+    /* Colors */
+    --color-primary: #4CAF50;
+    --color-primary-dark: #45a049;
+    --color-secondary: #2196F3;
+    --color-accent: #f44336;
+    --color-success: #4CAF50;
+    --color-warning: #FF9800;
+    --color-error: #f44336;
+    --color-info: #2196F3;
+    
+    /* Background Colors */
+    --bg-primary: #1a1d29;
+    --bg-secondary: #252940;
+    --bg-tertiary: #2a2d3a;
+    --bg-quaternary: #3a3d4a;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #8a8d9a;
+    --text-accent: #4CAF50;
+    --text-muted: #8a8d9a;
+    
+    /* Border Colors */
+    --border-primary: #3a3d4a;
+    --border-secondary: #2a2d3a;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.85rem;
+    --font-size-base: 0.95rem;
+    --font-size-lg: 1.1rem;
+    --font-size-xl: 1.3rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3.5rem;
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+    
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 8px;
+    --border-radius-xl: 12px;
+    --border-radius-full: 50%;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal: 1040;
+    --z-tooltip: 1070;
+    
+    /* Breakpoints */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    
+    /* Container Widths */
+    --container-sm: 100%;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1200px;
+    --container-2xl: 1400px;
+}
+
+/* Color Variations */
+:root {
+    /* Stock Colors */
+    --stock-positive: #4CAF50;
+    --stock-negative: #f44336;
+    --stock-neutral: #8a8d9a;
+    
+    /* Chart Colors */
+    --chart-primary: #4CAF50;
+    --chart-secondary: #2196F3;
+    --chart-tertiary: #9C27B0;
+    --chart-quaternary: #FF9800;
+    --chart-red: #f44336;
+    --chart-green: #4CAF50;
+    --chart-blue: #2196F3;
+    --chart-purple: #9C27B0;
+    --chart-orange: #FF9800;
+    --chart-teal: #009688;
+    --chart-pink: #E91E63;
+    --chart-gray: #607D8B;
+    
+    /* Company Logo Colors */
+    --company-oil: #FF5722;
+    --company-tech: #2196F3;
+    --company-finance: #4CAF50;
+    --company-healthcare: #00BCD4;
+    --company-automotive: #3F51B5;
+    --company-retail: #FF9800;
+    --company-energy: #795548;
+    --company-industrial: #607D8B;
+}
